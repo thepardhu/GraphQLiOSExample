@@ -14,6 +14,7 @@
 		D30BA1502939240B00937196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30BA14F2939240B00937196 /* Assets.xcassets */; };
 		D30BA1532939240B00937196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30BA1512939240B00937196 /* LaunchScreen.storyboard */; };
 		D328B215987A339D2E763D6D /* Pods_GraphQLiOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008382AEDDAE35BE6DFD2D6F /* Pods_GraphQLiOSExample.framework */; };
+		D3AA8E522943E79600E88B04 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = D3AA8E512943E79600E88B04 /* schema.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D30BA14F2939240B00937196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D30BA1522939240B00937196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D30BA1542939240B00937196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3AA8E512943E79600E88B04 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 				254A66CE60077798ED8A3538 /* Pods-GraphQLiOSExample.debug.xcconfig */,
 				9E3B97A1A851D7DDEF513E4B /* Pods-GraphQLiOSExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 		D30BA1452939240B00937196 /* GraphQLiOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				D3AA8E512943E79600E88B04 /* schema.json */,
 				D30BA1462939240B00937196 /* AppDelegate.swift */,
 				D30BA1482939240B00937196 /* SceneDelegate.swift */,
 				D30BA14A2939240B00937196 /* ViewController.swift */,
@@ -152,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AA8E522943E79600E88B04 /* schema.json in Resources */,
 				D30BA1532939240B00937196 /* LaunchScreen.storyboard in Resources */,
 				D30BA1502939240B00937196 /* Assets.xcassets in Resources */,
 				D30BA14E2939240B00937196 /* Main.storyboard in Resources */,
