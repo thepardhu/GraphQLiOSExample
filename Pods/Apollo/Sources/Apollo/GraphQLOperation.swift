@@ -4,17 +4,17 @@ public enum GraphQLOperationType {
   case subscription
 }
 
-public protocol GraphQLOperation: class {
+public protocol GraphQLOperation: AnyObject {
   var operationType: GraphQLOperationType { get }
-  
+
   var operationDefinition: String { get }
   var operationIdentifier: String? { get }
   var operationName: String { get }
-  
+
   var queryDocument: String { get }
-  
+
   var variables: GraphQLMap? { get }
-  
+
   associatedtype Data: GraphQLSelectionSet
 }
 

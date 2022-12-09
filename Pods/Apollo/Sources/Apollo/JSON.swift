@@ -8,7 +8,7 @@ public protocol JSONDecodable {
   init(jsonValue value: JSONValue) throws
 }
 
-public protocol JSONEncodable: GraphQLInputValue {
+public protocol JSONEncodable {
   var jsonValue: JSONValue { get }
 }
 
@@ -17,7 +17,7 @@ public enum JSONDecodingError: Error, LocalizedError {
   case nullValue
   case wrongType
   case couldNotConvert(value: Any, to: Any.Type)
-  
+
   public var errorDescription: String? {
     switch self {
     case .missingValue:
@@ -32,29 +32,21 @@ public enum JSONDecodingError: Error, LocalizedError {
   }
 }
 
-extension JSONDecodingError: Matchable {
-  public typealias Base = Error
-  public static func ~=(pattern: JSONDecodingError, value: Error) -> Bool {
-    guard let value = value as? JSONDecodingError else {
-      return false
-    }
-    
-    switch (value, pattern) {
-    case (.missingValue, .missingValue), (.nullValue, .nullValue), (.wrongType, .wrongType),  (.couldNotConvert, .couldNotConvert):
-      return true
-    default:
-      return false
-    }
-  }
-}
-
 // MARK: Helpers
 
-func equals(_ lhs: Any, _ rhs: Any) -> Bool {
-  if let lhs = lhs as? Reference, let rhs = rhs as? Reference {
-    return lhs == rhs
+public struct JSONValueMatcher {
+
+  public static func equals(_ lhs: Any, _ rhs: Any) -> Bool {
+    if let lhs = lhs as? CacheReference, let rhs = rhs as? CacheReference {
+      return lhs == rhs
+    }
+
+    if let lhs = lhs as? Array<CacheReference>, let rhs = rhs as? Array<CacheReference> {
+      return lhs == rhs
+    }
+
+    let lhs = lhs as AnyObject, rhs = rhs as AnyObject
+    return lhs.isEqual(rhs)
   }
-  
-  let lhs = lhs as AnyObject, rhs = rhs as AnyObject
-  return lhs.isEqual(rhs)
+
 }
