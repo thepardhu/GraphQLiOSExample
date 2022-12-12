@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		D30BA1472939240B00937196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BA1462939240B00937196 /* AppDelegate.swift */; };
 		D30BA1492939240B00937196 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BA1482939240B00937196 /* SceneDelegate.swift */; };
-		D30BA14B2939240B00937196 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BA14A2939240B00937196 /* ViewController.swift */; };
+		D30BA14B2939240B00937196 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BA14A2939240B00937196 /* ProductsViewController.swift */; };
 		D30BA14E2939240B00937196 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30BA14C2939240B00937196 /* Main.storyboard */; };
 		D30BA1502939240B00937196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30BA14F2939240B00937196 /* Assets.xcassets */; };
 		D30BA1532939240B00937196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30BA1512939240B00937196 /* LaunchScreen.storyboard */; };
 		D328B215987A339D2E763D6D /* Pods_GraphQLiOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008382AEDDAE35BE6DFD2D6F /* Pods_GraphQLiOSExample.framework */; };
+		D3866F952947ACB50046CD19 /* fetchCollections.graphql in Resources */ = {isa = PBXBuildFile; fileRef = D3866F942947ACB50046CD19 /* fetchCollections.graphql */; };
+		D3866F972947AD390046CD19 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866F962947AD390046CD19 /* API.swift */; };
 		D3AA8E522943E79600E88B04 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = D3AA8E512943E79600E88B04 /* schema.json */; };
 /* End PBXBuildFile section */
 
@@ -24,11 +26,13 @@
 		D30BA1432939240B00937196 /* GraphQLiOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLiOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30BA1462939240B00937196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D30BA1482939240B00937196 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D30BA14A2939240B00937196 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D30BA14A2939240B00937196 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		D30BA14D2939240B00937196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D30BA14F2939240B00937196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D30BA1522939240B00937196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D30BA1542939240B00937196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3866F942947ACB50046CD19 /* fetchCollections.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = fetchCollections.graphql; sourceTree = "<group>"; };
+		D3866F962947AD390046CD19 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D3AA8E512943E79600E88B04 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -82,16 +86,58 @@
 		D30BA1452939240B00937196 /* GraphQLiOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				D3866F962947AD390046CD19 /* API.swift */,
+				D3AA8E532943E98E00E88B04 /* features */,
 				D3AA8E512943E79600E88B04 /* schema.json */,
 				D30BA1462939240B00937196 /* AppDelegate.swift */,
 				D30BA1482939240B00937196 /* SceneDelegate.swift */,
-				D30BA14A2939240B00937196 /* ViewController.swift */,
+				D30BA14A2939240B00937196 /* ProductsViewController.swift */,
 				D30BA14C2939240B00937196 /* Main.storyboard */,
 				D30BA14F2939240B00937196 /* Assets.xcassets */,
 				D30BA1512939240B00937196 /* LaunchScreen.storyboard */,
 				D30BA1542939240B00937196 /* Info.plist */,
 			);
 			path = GraphQLiOSExample;
+			sourceTree = "<group>";
+		};
+		D3866F932947AC7C0046CD19 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				D3866F942947ACB50046CD19 /* fetchCollections.graphql */,
+			);
+			path = graphql;
+			sourceTree = "<group>";
+		};
+		D3AA8E532943E98E00E88B04 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				D3AA8E542943E9A700E88B04 /* products */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		D3AA8E542943E9A700E88B04 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				D3AA8E552943E9BD00E88B04 /* data */,
+			);
+			path = products;
+			sourceTree = "<group>";
+		};
+		D3AA8E552943E9BD00E88B04 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				D3AA8E562943E9C800E88B04 /* remote */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		D3AA8E562943E9C800E88B04 /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				D3866F932947AC7C0046CD19 /* graphql */,
+			);
+			path = remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +148,7 @@
 			buildConfigurationList = D30BA1572939240B00937196 /* Build configuration list for PBXNativeTarget "GraphQLiOSExample" */;
 			buildPhases = (
 				1E7ED094DDFB694871E7E71C /* [CP] Check Pods Manifest.lock */,
+				D3866F922947A87D0046CD19 /* Generate Apollo GraphQL API */,
 				D30BA13F2939240B00937196 /* Sources */,
 				D30BA1402939240B00937196 /* Frameworks */,
 				D30BA1412939240B00937196 /* Resources */,
@@ -155,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3AA8E522943E79600E88B04 /* schema.json in Resources */,
+				D3866F952947ACB50046CD19 /* fetchCollections.graphql in Resources */,
 				D30BA1532939240B00937196 /* LaunchScreen.storyboard in Resources */,
 				D30BA1502939240B00937196 /* Assets.xcassets in Resources */,
 				D30BA14E2939240B00937196 /* Main.storyboard in Resources */,
@@ -203,6 +251,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D3866F922947A87D0046CD19 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"${SRCROOT}/schema.json\" API.swift\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -210,8 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30BA14B2939240B00937196 /* ViewController.swift in Sources */,
+				D30BA14B2939240B00937196 /* ProductsViewController.swift in Sources */,
 				D30BA1472939240B00937196 /* AppDelegate.swift in Sources */,
+				D3866F972947AD390046CD19 /* API.swift in Sources */,
 				D30BA1492939240B00937196 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

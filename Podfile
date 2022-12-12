@@ -6,6 +6,6 @@ target 'GraphQLiOSExample' do
   use_frameworks!
 
   # Pods for GraphQLiOSExample
-  pod 'Apollo', '~> 0.53.0', :inhibit_warnings => true
+  pod 'Apollo', '~> 0.17.0', :inhibit_warnings => true
 
 end
